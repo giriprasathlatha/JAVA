@@ -105,4 +105,99 @@ JRE
 
       2. Camel Notation
       ==============================
-      
+      First word's first letter should be in small and remaining each word's first letter should be in capital.
+
+     Where to use :- methodName,VariableName,objectName.
+
+eg.ZohoCorporation
+
+Project
+==============
+Eclipse--->File-->New----->Project------->Java Project----->ProjectName(PascalNotation)-->finish
+
+Package
+===============
+Project-------->src(R)---->new-------->Package------->com.tcs[TCS Company]org.cts[Organization]
+com ->Company
+org ->Organization
+
+class
+================
+Package(R)---->New----->Class----->ClassName(PascalNotation)-->Finish
+
+Method
+==========
+1.Type the method name and then press ctrl+space bar [private method]
+2.press ctrl+space bar,select the required method from the displayed options.
+
+To Run a Program
+==================
+---->Right Click-------->Run as------> Java Application
+
+Main Method 
+========================
+Type main and then press ctrl+space bar --->Select main mrthod from the option.
+
+Data Types:
+===============
+it Specifies about size and type of a variable.
+
+Syntax:
+=============
+datatype variablename=value;
+int a=10;
+
+Variable:
+================== 
+It is used to store the value , Name of 
+
+
+age -------->variableName
+20 --------> Value
+= ------------> assesment operator
+
+note: assign right side value to left side value
+
+Datatypes         Size        WeapperClass        DefaultValue             Ranges
+==================================================================================================================
+byte              1            Byte               0                         (-128 to 127)
+short             2            Short              0                         (max 4)
+int               4            Integer            0                         (max 9)
+long              8            Long               0                         (max )
+float             4            Float              0.0                        (-128 to 127)
+double            8            Double             0.0                        (-128 to 127)
+char('a')         1            Byte               0                         (-128 to 127)
+Strings('name')
+boolean(true/false)
+
+
+byte,short,int,long------------>numbers without decinal value(eg 100,200,300)
+float,double-------------->number with decimal value(eg 100,123,563,899965)
+
+
+
+Range Calculation Formula
+=============================
+1 byte = 8 bits
+2 byte = 16 bits
+4 byte = 32 bits
+8 byte = 64 bits
+
+
+
+    -(2^n-1) to ((2^n-1)-1)
+        nano of bits
+
+for 4 bytes i.e :- 32bits`
+ -(2^n-1) to ((2^n-1)-1)
+ -(2^32-1) to ((2^32-1)-1)
+ -2^31 to ((2^31-1)-1)
+ -2147483648  to  2147483648-1
+ -2147483648  to  2147483647
+
+
+2^2^2^2^2^2^2^2 = 2^8
+
+
+
+
