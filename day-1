@@ -198,6 +198,46 @@ for 4 bytes i.e :- 32bits`
 
 2^2^2^2^2^2^2^2 = 2^8
 
+1.String :
+ -> Collection of character or word enclosed with double qution is called String.
+ -> String is pre defined Class.
+ -> It is presented in java.lang package.
+ -> It is based on index -> (0 to n-1);
+
+Syntax
+=================
+String refName = "Value;
+String  s = "Java";
+             0123
+
+Example
+=========================
+String refName = "Java" ; length = 4 index = 0 to n-1 => n=no of the character/length of the string
+
+String s = "Java";
+
+2.String Method
+============================
+length();
+charAt();
+startsWith();
+endsWith();
+toUpperCase();
+toLowerCase();
+indexOf();
+lastIndexOf();
+replace();
+replaceAll();
+subString(startindex)
+subString(startindex,endindex);
+isEmpty();
+Contains();
+equals();
+equalsIgnoreCase();
+conCat();
+trim();
+
+
 
 
 
