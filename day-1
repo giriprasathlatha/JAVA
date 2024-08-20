@@ -239,5 +239,144 @@ trim();
 
 
 
+String Types
+=======================
+Literal String
+Non literal String
+
+Literal String
+========================
+String s1="welcome"
+String s2="welcome"
+Incase of the duplicate, it will share the memory.
+it is stored inside string constant
+
+Non Literal String
+==========================
+Incase of the duplicate in the string pool/ String constant but share some memory content
+
+
+program
+=====================
+s1="Java";
+s2="Java";
+s3="Sql";
+
+sop(System.identHasCOde(s1));
+sop(System.identHasCOde(s2));
+sop(System.identHasCOde(s3));
+
+sop("non-literal string");
+s4="Java";
+s5="Java";
+s6="Sql";
+
+sop(System.identHasCOde(s4));
+sop(System.identHasCOde(s5));
+sop(System.identHasCOde(s6));
+
+=================================
+
+Immutable
+Mutable
+
+Immutable
+======================
+Same as the literal String
+String s = "Welcome";
+we use concat method.
+It is stored inside the string pool or String Constant
+While join or any action immutable String,it will not share any one of the String memory location
+
+Mutable
+=====================
+Same as non literal string but use StringBuffer or StringBuilder
+StringBuffer s = new StringBuffer("Welcome");
+StringBuilder s = new StringBuilder("Welcome");
+
+
+It is Stored in Heep Location 
+We can use append method
+during concationation it will not take new memory
+While join or any action on StringBuffer or StringBuilder, it will share anyone String memory location
+
+
+StringBuffer
+=====================
+Synchonous ----> sequential
+Threadsafe
+slow
+
+StringBuilder
+======================
+Asynchronous ------> Non Sequential
+Non Thead safe
+fast
+
+
+Non Linear String         Mutable String               Heap Memory
+StringBuffer's =new StringBuffer();
+s1="Java";---->43270           in case using the append method it will share the same memory address
+s2="Java";------>35829
+s3="Sql";--->67829
+s4=s2.append(s3);
+s4="JavaSql"---->35829;
+
+
+Linear String         Immutable String               String Pool/String Constant
+
+s="java";
+s1="java":
+
+
+
+
+
+
+program
+==========================
+sop("Immutable String");
+s1="Java";
+s2="Java";
+s3="Sql";
+s4=s2.concat(s3);
+
+sop(System.identHasCOde(s1));
+sop(System.identHasCOde(s2));
+sop(System.identHasCOde(s3));
+sop(s4);
+sop(System.identHasCOde(s4));
+
+sop();
+sop("Mutable String");
+StringBuffer s5=new StringBuffer("Java");
+StringBuffer s6=new StringBuffer("Java");
+StringBuffer s7=new StringBuffer("Sql");
+StringBuffer s8=s6.append(s7);
+
+sop(System.identHasCOde(s5));
+sop(System.identHasCOde(s6));
+sop(System.identHasCOde(s7));
+sop(s8);
+sop(System.identHasCOde(s8));
+=================================
+
+output
+================
+Immutable
+47465244
+47465244
+932583850
+JavaSql
+212628335
+
+Mutable
+212628335
+359023572
+305808283
+JavaSql
+305808283
+======================
+
 
 
