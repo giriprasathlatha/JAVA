@@ -673,3 +673,57 @@ bank.CurrentAccount();
 bank.fixedDeposit();
 }
 =====================================================================
+
+Abstraction
+======================
+Hiding  the implementation details or business logic details
+
+Types of abstraction:
+=============================
+partial abstraction / Absrtact Class
+Fully abstraction / interface
+
+partial abstraction(abstract class):
+=========================================
+contain both abstraction and non abstract methods
+we can't create object
+contain keywords extends
+
+Fully abstraction(Interface):
+=====================================
+contain only the abstract methods
+we can't create object
+contain keywords implements 
+
+Abstract Method:
+====================
+The method which contains only template[does not contain any logic] is called abstract method or method signature
+
+Non abstract Method:
+==========================
+Method which contain logic is called non abstract method
+--------------------------------------------------------------------------------------------------------------------------------------------------
+program
+===============================
+public abstract class EmployeeDetails {
+abstract void empName();
+public void empId(){
+sop("EMployee Id is E77");
+}
+}
+=====================================================
+public class CompanyDetails extands Employee{
+void empName {
+sop("Employee Name is");
+}
+private void companyName(){
+sop("Company name is ");
+}
+public static void main(String [] args){
+CompanyDetails cd = new CompanyDetails();
+cd.empName();
+cd.empId();
+cd.CompanyName();
+}
+}
+====================================================
