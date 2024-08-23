@@ -378,5 +378,298 @@ JavaSql
 305808283
 ======================
 
+Disadvantage of array:
+===================================================
+1.Memory wastage very high (Memory is allowed at compile time)
+2.It only support similar data types
+
+Collection :Interface
+==========================
+It is an predefined Interface under java.util.package
+1.Storing multiplre values of disSimilar dataType in a single refName
+2.Memory wastage is low due to memory is allocated at run time.
+
+List:I
+========================
+List is predefined interface which is present in java.util.package
+List is an index based
+List allows duplication
+List prints in Insertion order
+
+Types of List (OR) Classes of List:
+==================================
+1.ArrayList
+2.
 
 
+Method in List
+======================
+add();
+Size();
+get(index);
+add(index, Value);
+remove(index);
+set(index,Value);
+indexOf(Value);
+lastIndexOf(Value);
+contains(Value);
+
+addAll();
+retainAll();
+removeAll();
+
+set:I
+================
+Set is the predefined interface which is present int java.util package
+Set is value based one
+Set doesn't allow duplicate Values
+Order of set is based on class which we implement
+
+Types of set (or) Classes of Set
+===============================
+HashSet---random
+LinkedHashSet-----insertion
+TreeSet----ascending order
+
+Generics:
+==========================
+Support only similar datatypes
+jdk 1.5 Version
+< >-------Generics------->inside the generics we need to pass only wrapper Class
+
+
+Inheritance:
+==================
+we can access one class property from another class.
+by using extends keyword
+
+why?:
+============
+to reduce memory westage.
+reusable code purpose.
+
+Types of inheritance:
+======================
+Single inheritance
+Multiple inheritance
+Multilevel inheritance
+Hierarchial inheritance
+Hybrid inheritance
+
+Single inheritance:
+==================================
+combination of one parent one child class
+
+Multiple inheritance:
+====================
+more than one parent class will acess one child parallel at a time
+multiple inheritance cannot be achieved through java Class.
+
+Because 
+1)Syntax error
+2)Priority issue
+
+interface ---------> Through interface concept we can do multiple inheritance
+
+Mutilevel inheritance:
+=========================
+more than one parent will acess one chils in a tree like structure
+
+Hierarchical inheritance:
+=========================
+Combination of more than one child and one parent.
+
+Hybrid inheritance:
+======================
+Combination of multiple chilid 
+
+
+Program
+============================
+public class EmployeeDetails{
+public void empName(){
+sop("Employee Name is R");
+}
+public void empId(){
+sop("Employee Id id E1");
+}
+}
+===========================
+public class CompanyDetails extands EmployeeDetails{
+private void companyName(){
+sop("Company Name is Zoho");
+}
+private void companylocation(){
+sop("Company loc is karur");
+}
+public static void main(String [] args){
+Company detais c = new Company details ();
+c.companyName();
+c.CompanyLocation();
+c.empName();
+c.empId();
+}
+}
+-------------------------------------------------------------------------------
+============================
+public class ClientDetails{
+public void ClientName(){
+sop("Client Name is ford");
+=========================
+public class EmployeeDetails extands ClientDetails{
+private void empName(){
+sop("Employee Name is Rahul");
+}
+private void empId(){
+sop("Employee Id is E1");
+}
+=================================
+public class CompanyDetails extands EmployeeDetails{
+private void companyName(){
+sop("Company Name is Zoho");
+}
+private void companylocation(){
+sop("Company loc is karur");
+}
+public static void main(String [] args){
+CompanyDetais c = new CompanyDetails ();
+c.CompanyName();
+c.CompanyLocation();
+c.empName();
+c.empId();
+c.clientName();
+}
+}
+===============================================
+--------------------------------------------------------------------------------
+
+Single inheritance
+------------------------------------
+|  Parent Class                    |
+------------------------------------
+           |
+           |
+------------------------------------
+|  Child Class                    |
+------------------------------------
+
+Multiple inheritance
+------------------------------------              ------------------------------------
+|  Parent Class  A                  | ------------ |  Parent Class  B                 |
+------------------------------------              ------------------------------------
+           |                |-----------------------------------------|
+           |                |
+------------------------------------
+|  Child Class                    |
+------------------------------------
+
+Multilevel inheritance
+
+------------------------------------
+| Grant Parent Class               |    
+------------------------------------
+           |
+           |
+------------------------------------
+|  Parent Class                    |
+------------------------------------
+           |
+           |
+------------------------------------
+|  Child Class                    |
+------------------------------------
+
+Hierarchial inheritance
+
+------------------------------------
+| Grant Parent Class               |    
+------------------------------------
+           |
+           |
+------------------------------------              ------------------------------------               ------------------------------------
+|  Parent Class  A                  | ------------ |  Parent Class  B                 |--------------   Parent Class  B                 |
+------------------------------------              ------------------------------------                ------------------------------------
+
+
+================================================================================================
+
+
+Polymorphism
+=====================
+Executing methods in more than one forms or taking more than one forms or computing one task in different ways.
+
+poly-------many
+morphism------forms
+
+Types of Polymorphism:
+===============================
+Method overloading (compile time polymorphism / ststic binding / static polymorphism)
+--------------------------------------------------------------------------------------
+with the same method you will create multiple methods and the methods differ based on the argument and the argument are different datatype,datatype count and datatype order
+
+same class
+same method name
+diff parameter/argument
+
+the argument depends on dataType
+the argument depends on dataType number or count
+the argument depends on dataType order
+
+Method overriding(runTime polymorphism / dynamic binding/ Dynamic polymorphism)
+--------------------------------------------------------------------------------
+Whenever you are not satisfied with the business logic of your parent class method, you will create the same method with same argument in the child class and when you create the object reference and the call method , the child class method will get the preference. so you are overiding the parent class method with the child class method.
+
+same method name
+same argument / parameter
+diff class
+
+Program
+===============================================
+public class client{
+private void clientdetails(int age){
+sop("Client age is"+ age);
+}
+private void clientdetails(String Name){
+sop("Client Name is"+ Name);
+}
+private void clientdetails(int id, String designation){
+sop("Client id is"+ Id);
+sop("Client desination is"+ designation);
+}
+private void clientdetails(String location,id pincode){
+sop("Client location is"+ location);
+sop("Client pincode is"+ pincode);
+}
+public static void main (String [] args){
+Client c = new Client();
+c.clientDetails(27);
+c.clientDetails("Raghul");
+c.clientDetails(100,"Engineering");
+c.clientDetails("Coimbature",60042);
+}
+======================================================
+-------------------------------------------------------------------------------------------------------------------------------------------
+public class Reservbank{
+public void savingAccount(int interest){
+sop("Intrest rate of SA is 8%");
+}
+public void CurrentAccount(int interest){
+sop("Intrest rate of CA is 6%");
+}
+}
+=================================================================
+public class UnionBank extands ReservBank{
+private void savingAccount(int interest){
+sop("Intrest rate of SA is "+ intrest +"%");
+super.savingAccount(8);
+}
+private void fixedDeposit(){
+sop("Intrest rate of FD is 5%");
+}
+public static void main(String [] args){
+UnionBank bank = new UnionBank();
+bank.savingAccount(7);
+bank.CurrentAccount();
+bank.fixedDeposit();
+}
+=====================================================================
