@@ -727,3 +727,28 @@ cd.CompanyName();
 }
 }
 ====================================================
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public interface StudentDetails{
+void studentName();
+void StudentDept();
+}
+======================================
+public class CollegeDetails extands StudentDetails{
+private void StudentName(){
+sop("Student Name is Vijay");
+}
+private void StudentSept(){
+sop("Student Dept is Cyber");
+}
+private void CollegeName(){
+sop("College Name is MKCE");
+}
+public static void main(String [] args){
+CollegeDetais c = new CollegeDetails ();
+c.StudentName();
+c.StudentDept();
+c.CollegeName();
+}
+}
+==============================================
