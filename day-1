@@ -399,7 +399,8 @@ List prints in Insertion order
 Types of List (OR) Classes of List:
 ==================================
 1.ArrayList
-2.
+2.LinkedList
+3.Vector
 
 
 Method in List
@@ -418,6 +419,105 @@ addAll();
 retainAll();
 removeAll();
 
+========================================================================================
+public static void main(String [] aegs){
+List li = new ArrayList();
+li.add(100);
+li.add("Cyber");
+li.add(false);
+li.add('f');
+li.add(45.78f);
+li.add(100);
+sop(li);
+int Size = li.Size();
+Sop(Size);
+object ob = li.get(2);
+SOP(ob);
+}
+=================================================================================================
+
+public static void main(String [] aegs){
+List<Integer> li  = new ArrayList();
+li.add(100);
+li.add(200);
+li.add(300);
+li.add(400);
+li.add(500);
+li.add(100);
+sop(li);
+int Size = li.Size();
+Sop(Size);
+Integer integer = li.get(2);
+SOP(integer);
+li.add(3, 350);
+SOP(li);
+li.add(3, 700);
+SOP(li);
+li.remove(3);
+SOP(li);
+int indexOf = li.indexOf(100);
+SOP(indexOf);
+int lastIndexOf = li.lastIndexOf(100);
+SOP(lastIndexOf);
+boolean contains = li.contains(700);
+SOP(contains);
+}
+============================================================================
+
+public static void main(String [] aegs){
+List<Integer> li  = new ArrayList();
+li.add(100);
+li.add(200);
+li.add(300);
+li.add(400);
+li.add(500);
+li.add(100);          
+SOP(li);
+List<Integer> l = new ArrayList<Integer>();
+l.add(10);
+l.add(20);
+SOP(l);
+l.addAll(li);
+SOP(l);
+l.removeAll(li);
+SOP(l);
+l.retainAll(li);'
+SOP(l);
+SOP("Top iterate and fetch the value using For loop");
+for(int i=0;i<li.size();i++){
+SOP(li.get(l)); 
+}
+SOP();
+SOP("To iterate and fetch the value based on enhanced For loop");
+for(Integer b :li){
+SOP(b);
+}
+}
+----------
+Output
+------------
+[100,200,300,400,500,100]
+[10,20]
+[10,20,100,200,300,400,500,100]
+[100,200,300,400,500,100]
+Top iterate and fetch the value using For loop
+100
+200
+300
+400
+500
+100
+
+To iterate and fetch the value based on enhanced For loop
+100
+200
+300
+400
+500
+100
+=========================================================================================
+
+
 set:I
 ================
 Set is the predefined interface which is present int java.util package
@@ -427,7 +527,7 @@ Order of set is based on class which we implement
 
 Types of set (or) Classes of Set
 ===============================
-HashSet---random
+HashSet-m--random
 LinkedHashSet-----insertion
 TreeSet----ascending order
 
@@ -437,6 +537,53 @@ Support only similar datatypes
 jdk 1.5 Version
 < >-------Generics------->inside the generics we need to pass only wrapper Class
 
+=================================================================================================================
+public static void main(String [] aegs){
+Set<Integer> s = new LinkedHashSet();
+s.add(10);
+s.add(20);
+s.add(30);
+s.add(40);
+s.add(50);
+SOP(s);
+int size = s.size();
+SOP(size);
+s.remove(40);
+SOP(s);
+s.clear();
+SOP(s);
+for(Integer a:s){
+SOP(a);
+}
+}
+-------------------
+Output
+------------
+[10,20,30,40,50]
+5
+[10,20,30,50]
+10
+20
+30
+50
+
+==============================================
+public static void main(String [] aegs){
+List<Integer> s = new ArrayList<Integer>();
+s.add(10);
+s.add(20);
+s.add(30);
+s.add(40);
+s.add(50);
+s.add(10);
+s.add(30);
+SOP(s);
+Set<Integer> l = new LinkHashSet();
+l.addAll(s);
+SOP(l);
+}
+
+================================
 
 Inheritance:
 ==================
@@ -752,3 +899,4 @@ c.CollegeName();
 }
 }
 ==============================================
+
