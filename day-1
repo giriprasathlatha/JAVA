@@ -900,3 +900,231 @@ c.CollegeName();
 }
 ==============================================
 
+Map:I
+==============
+key,value pair combination
+key does not allow duplicates
+values allow duplicates
+
+Types of map
+------------------
+HashMap-----------Random-------> key=1 null              Values=n null
+LinkedHashMap-----------Insertion-------> key=1 null              Values=n null
+TreeMap-----------Ascending order-------> key=ignore null              Values=n null
+HashTable-----------Random order-------> key=ignore null              Values=ignore null
+
+Methods of map
+-----------------
+size()
+get()
+Keyset()
+values()
+containskey()
+containsValue()
+isEmpty()
+remove()
+
+put()-- to insert the value
+size()-- used to find out of Map
+get(key)--- value by using key
+containskey()---used to check the particular key is present or not
+containsValues()--used to check the particular value is present or not
+Values()---displaying the values only and its return type is collection.
+Keyset()-----display the keys only and its return type is set
+remove()---remove the values of the map
+clear()---used to clear the values of the map
+getKey()---displaying the corresponding keys values
+getValues()---displaying the corresponding values
+entrySet()---for interseting the map and its return type is set<Entry<>>
+
+Difference between hashtable and hashmap:
+==========================
+Hashmap:
+--------------
+"Asynchronize--->Allows users parallely
+"Key=1 null values = n null
+"non thred safe
+
+Hashtable:
+-------------------
+Synchronize -------allows users one by one
+ignore null values is key and values
+thread safe
+
+======================================================
+import java.util.collection;
+public class Studentdetails{
+public static void main(String [] aegs){
+Map<Integer, String> m = new Hashtable<Integer, String>();
+m.put(100, "Java");
+m.put(300, "Sql");
+m.put(400, "Cyber");
+m.put(200, "python");
+m.put(500, "React");
+m.put(200, "Mongo");
+SOP(m);
+int size = m.size();
+SOP(size);
+String string =m.get(200);
+SOP(string);
+bollean contaniskey=m.contaniskey(600);
+SOP(contaniskey);
+sop(m.contanisValues("Python"));
+Collection<String> values = m.values();
+SOP(values);
+Set<Integer> keySet = m.keySet();
+SOP(keySet);
+m.remove(300);
+SOP(m);
+m.clear();
+SOP(m);
+}
+}
+=====================================================================
+import java.util.collection;
+public class Studentdetails{
+public static void main(String [] aegs){
+Map<Integer, String> m = new Hashtable<Integer, String>();
+m.put(100, "Java");
+m.put(300, "Sql");
+m.put(400, "Cyber");
+m.put(200, "python");
+m.put(500, "React");
+m.put(200, "Mongo");
+SOP(m);
+Set<Entry<Integer, String>> entrySet = m.entrySet();
+for(Entry<Integer, String> entry:entrySet){
+SOP(entry);
+SOP(entry.getKey());
+SOP(enrty.getValue());
+}
+}
+}
+===========================================================================
+Output
+----------------------
+{500=React, 400=Cyber, 300=Sql, 200=Mongo, 100=Java}
+500=React
+500
+React
+400=Cyber
+400
+Cyber
+300=Sql
+300
+Sql
+200=Mongo
+200
+Mongo
+100=Java
+100
+Java
+===============================
+
+Types of variable
+---------------------
+Local variable
+Instance variable
+Static variable
+
+
+Local Variable
+----------------------
+It diclear inside the method block or constructor
+It get activated When the control enters to the method
+It get deactivates When the control exits to the method
+we need to inslize the value it doesn't takes the different value automatically
+we can't declear any access specifier for the local variable
+It is srored in the steck memory(Temp memory)
+
+Instance variable
+------------------------
+It is declear the class and outside the method
+It gets activated When the Object is created
+It gets deactivated When the Object is destroyed
+we need to initialize the value for instance variable it takes default value automatically
+we can declare any access specified for the instance variable
+It is stored in the heap memory
+
+
+Static Variable(class level)
+----------------------------------
+It is declear inside the class and outside the method
+It gets activated When the  control enters to the class
+It gets deactivated When the control exits to the class
+we need to initialize the value for static variable it takes default value automatically
+we can declare any access specified for the Static variable
+It different class using extands we can call directly by a variable name,without using extand call by classname,variable name.
+It is stored in Static memory (Fixed memory).
+==========================================================================================================================================
+
+public class Studentdetails{
+public int b=100;
+public static int c=50;
+private void m1(){
+int a=10;
+SOP("Inside the method m1()" + a);
+SOP("Accessing instance var inside m1()"+b);
+}
+public Studentdetails(){
+in a=30;
+SOP("Inside the Constructor" + a);
+SOP(""Accessing instance var inside constructor" +b);
+}
+public static void main(String [] args){
+int a=10;
+SOP("Inside the main () " +a);
+Studentdetails s = new Studentdetails();
+s.m1();
+SOP(s.b);
+SOP(c);
+}
+}
+==============================================================================================
+public class ColegeDetails extands StudentDetails{
+public static void main(String [] args){
+SOP(Studentdetails.c);
+SOP(c);
+}
+}
+====================================
+Encapsulation:
+-----------------------
+Wrapping the data and the code acting on the data togather into a single unit
+
+pojo Class
+plain old java object/ Bean class
+Step 1 : we declear private variable
+step 2 we generate getters and setters (automatic method creation)
+
+================================================================================================================
+
+public class CollegeDetails{
+private int age;
+private String name;
+public int getAge(){
+return age;
+}
+public void setAge(int age){
+this.age=age;
+}
+public void getName(){
+return name;
+}
+public void setName(String name){
+this.name=name;
+}
+}
+==========================================================================================================================
+public class CollegeDetails{
+public static void main(String [] args){
+Studentdetails details = new Studentdetails();
+details.setAge(20);
+details.setName("Kee");
+int age = details.getAge();
+SOP(age);
+String name = details.getName();
+SOP(name);
+}
+}
+
